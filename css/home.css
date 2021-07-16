@@ -16,8 +16,7 @@ video{
   display: inline;
 height: 245px ;
 width: 250px;
-border-bottom-left-radius: 30px;
-border-bottom-right-radius: 30px;
+border-radius: 30px;
 margin-top: 80px;
 -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
 
@@ -68,17 +67,7 @@ body {
   padding-left: 10px;
   animation: text-light 1.3s linear infinite;
 }
-@keyframes text-light {
-  0% {
-    color: rgb(105, 104, 110);
-  }
-  90% {
-    color: rgb(105, 104, 110);
-  }
-  100% {
-    color: rgb(250, 1, 1);
-  }
-}
+
 .register_style li:nth-child(1) {
   animation-delay: 0s;
 }
@@ -117,41 +106,7 @@ body {
   display: flex;
   justify-content: center;
 } */
-@media screen and (max-width: 490px) {
-  .dynamic-txts li {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 380px) {
-  .dynamic-txts li {
-    font-size: 35px;
-  }
-  .dynamic-txts li span::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-  }
-}
-@media (max-width: 360px) {
-  .dynamic-txts li {
-    font-size: 38px;
-  }
-}
-@media (max-width: 512px) {
-  .dynamic-txts li {
-    font-size: 50px;
-  }
-}
-@media (max-width: 440px) {
-  .dynamic-txts li {
-    font-size: 45px;
-  }
-}
-@media (max-width: 400px) {
-  .dynamic-txts li {
-    font-size: 40px;
-  }
-}
+
 div img.d-block {
   margin-top: 62px !important;
 }
@@ -247,47 +202,6 @@ div img.d-block {
   transform: translateY(10px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
-/* dropdown style */
-@-webkit-keyframes hvr-icon-hang {
-  0% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-  50% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
-@keyframes hvr-icon-hang {
-  0% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-  50% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
-@-webkit-keyframes hvr-icon-hang-sink {
-  100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
-@keyframes hvr-icon-hang-sink {
-  100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
 .hvr-icon-hang {
   display: inline-block;
   vertical-align: middle;
@@ -326,41 +240,6 @@ div.typerap {
   font-size: 50px;
   color: black;
  
-}
-@media (max-width: 700px) {
-  div .typerap {
-    font-size: 45px;
-  }
-}
-
-@media (max-width: 600px) {
-  div .typerap {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 550px) {
-  div .typerap {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 500px) {
-  div .typerap {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 450px) {
-  div .typerap {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 400px) {
-  div .typerap {
-    font-size: 25px;
-  }
 }
 /* card_image  */
 .front-card-image {
@@ -567,4 +446,90 @@ font-size: 15px;
     transform: translateZ(0) translateY(0);
     opacity: 1;
   }
+}
+
+/* navbar li a:animation */
+
+@keyframes slide-in-blurred-tr {
+  0% {
+    transform: translate(1000px, -1000px) skew(-80deg, -10deg);
+    transform-origin: 0% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) skew(0deg, 0deg);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* registration animation */
+@keyframes text-light {
+  0% {
+    color: rgb(105, 104, 110);
+  }
+  90% {
+    color: rgb(105, 104, 110);
+  }
+  100% {
+    color: rgb(250, 1, 1);
+  }
+}
+
+/* dropdown style */
+@-webkit-keyframes hvr-icon-hang {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@keyframes hvr-icon-hang {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes hvr-icon-hang-sink {
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@keyframes hvr-icon-hang-sink {
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+ul.grt-menu li a {
+  animation: slide-in-blurred-tr 0.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.btn-outline-dark:hover {
+  background: linear-gradient(to left, #0b486b, #f56217);
+
+  color: black;
+}
+#background {
+  background: linear-gradient(to left, #a9f1df, #ffbbbb);
+}
+.btn-outline-dark a:hover {
+  color: black;
 }
